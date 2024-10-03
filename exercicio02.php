@@ -13,11 +13,9 @@
     echo "<a href='https://www.google.com/'>Google</a> </br></br>";
 
     echo "<h1><b>URLs Relativas</b></h1> </br>";
-    echo "<a href='https://www.w3schools.com/html/html_images.asp'>HTML Images</a> </br></br>";
+    echo "<a href='exercicio01.php'>HTML Images</a> </br></br>";
 
-    echo "<a href='https://www.w3schools.com/css/'>CSS Tutorial</a> </br>";
-
-
+    echo "<a href='teste.php'>CSS Tutorial</a> </br>";
     ?>
 </body>
 </html>
