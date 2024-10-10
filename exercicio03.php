@@ -16,7 +16,7 @@
     } elseif ($hora >12 && $hora <18){
         echo "<h1>Boa tarde!</h1></br>" ;
         echo "<img src='https://i0.wp.com/blogandarilho.com.br/wp-content/uploads/2020/05/Ponte-dellAccademia-Veneza-It%C3%A1lia-Divulga%C3%A7%C3%A3o-1.jpg?w=750&ssl=1' alt='img'>";
-    }elseif($hora >=18 && $hora <=24){
+    } elseif($hora >=18 && $hora <=24){
         echo "<h1>Boa noite!</h1></br>" ;
         echo "<img src='https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1920/v1646710357/kf4du3b2ghohf8prmmcc.jpg' alt='img'>";
     }

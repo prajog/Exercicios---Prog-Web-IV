@@ -4,34 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 04</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table></table>
+    <h2>Relatório de Clientes</h2>
     <?php
-    echo "<h1><b>Resultado Relatório de Clientes:</b></h1>";
-    $array = array("Código" => "Nome", 1 => "Alberto Silva", 2 => "Bianca Duarte", 
-    3 => "João Almeida", 4 => "Valéria Souza", 5 => "Augusto Silva");
+      //array associativo
+      //dá pra fazer com array de arrays e fazer loop
+      $pessoa1 = array("codigo"=> 1, "nome" => "Alberto Silva");
+      $pessoa2 = array("codigo"=> 2, "nome" => "Bianca Duarte");
+      $pessoa3 = array("codigo"=> 3, "nome" => "João Almeida");
+      $pessoa4 = array("codigo"=> 4, "nome" => "Valéria Souza");
+      $pessoa5 = array("codigo"=> 5, "nome" => "Augusto Silva");
+      $lista = ['pessoa'][] = $pessoa1; //array maior chamado pessoa. Lista de lista
+      $lista = ['pessoa'][] = $pessoa2;
+      $lista = ['pessoa'][] = $pessoa3;
+      $lista = ['pessoa'][] = $pessoa4;
+      $lista = ['pessoa'][] = $pessoa5;
 
-    $totlinhas = count($array);
+      var_dump($lista);
 
-    echo "<table border='1'>";
-	echo "<tr>";
-		echo "<th>Carro</th>";
-		echo "<th>Em estoque</th>";
-		echo "<th>Vendidos</th>";
-	echo "</tr>";
-	for ($linha = 0; $linha < $totlinhas ; $linha++) {
-		
-	  //echo "<p><b>Linha número $linha</b></p>";
-	  echo "<tr>";
-	  for ($col = 0; $col < 3; $col++) {
-		echo "<td>".$carros[$linha][$col]."</td>";
-	  }
-	  echo "</tr>";
-	}
-    echo "</table>";
-
-    echo($array);
+      //Vai imprimir 5 vezes o table
+      //lista pessoa
+      foreach($lista as $listapessoas){
     ?>
+    <!--Volta a ser HTML, pra não usar o echo e misturar muito o front com o back-->
+    <!--Linguagem macarroni mistura muito o back com o front-->
+
+    <table>
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+      </tr>
+
+      <?php 
+        //índice das pessoas no array pessoa
+        foreach($listapessoas as $itempessoas => $valuepessoas){?>
+          <tr>
+            <?php
+              //pega o nome e o código
+              foreach($valuepessoas as $item => $value){
+                echo "<td>$value</td>";
+              }?>
+          </tr>    
+      <?php } ?>
+    </table>
+    <?php } ?>
 </body>
 </html>
